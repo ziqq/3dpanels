@@ -7,6 +7,51 @@ $(document).ready(function() {
 		wResize();
 	});
 
+	$(window).on("load",function(){
+		// $('.city-dropdown, .js-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner, .search__result').niceScroll({
+		// 	cursorcolor: '#baab82',
+		// 	horizrailenabled: false,
+		// 	autohidemode: false,
+		// 	boxzoom: false,
+		// 	"verge": "500",
+		// 	cursorwidth: '4px',
+		// 	cursorborder: 'none',
+		// 	cursorborderradius:'0'
+		// });
+
+		// if($(window).width() > 480){
+		// 	setTimeout(function (){
+		// 		NProgress.set(0.33);
+		// 	}, 1000);
+
+		// 	setTimeout(function (){
+		// 		NProgress.set(0.66);
+		// 	}, 2000);
+
+		// 	setTimeout(function (){
+		// 		NProgress.set(0.9);
+		// 	}, 3000);
+
+		// 	setTimeout(function (){
+		// 		NProgress.done();
+		// 	}, 3500);
+		// }else{
+		// 	NProgress.done();
+		// }
+		
+	});
+
+	// $('.city-dropdown, .js-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner, search__result').mouseover(function() {
+	// 	$(this).getNiceScroll().resize();
+	// });
+
+
+
+	//Mask
+	if($('.phone-mask').length){
+		$('.phone-mask').mask("+7(999) 999-9999");
+	}
+
 	function heightses() {
 		// $(".benefits-item").height("auto").equalHeights();
 		// $(".benefits-item__title").height("auto").equalHeights();
@@ -100,13 +145,6 @@ $(document).ready(function() {
 
 	$('.js-custom-scroll').mCustomScrollbar();
 	$(".form__input-phone").mask("+7(999) 999-99-99");
-
-   	//SVG Fallback
-   	if(!Modernizr.svg) {
-   		$("img[src*='svg']").attr("src", function() {
-   			return $(this).attr("src").replace(".svg", ".png");
-   		});
-   	};
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail

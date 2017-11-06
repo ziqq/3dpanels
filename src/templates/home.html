@@ -24,50 +24,19 @@ title: 3D Панели для стен в Балаково
 			</div>
 			<div class="row">
 
+				{% import "data/data.html" as infoItem %}
+				{% for item in infoItem.infoItem %}
 				<div class="info-item">
 					<div class="info-item__inner">
 						<div class="info-item__img">
-							<img class="img-responsive img-svg" src="img/icons/ico--eco.svg" alt="Экологички чистые материалы">
+							<svg class="icon icon-{{item.img}}">
+								<use xlink:href="img/sprite.svg#{{item.img}}"></use>
+							</svg>
 						</div>
-						<div class="info-item__desc">Экологички чистые (абсолютно не токсичные) материалы.</div>
+						<div class="info-item__desc">{{item.desc}}</div>
 					</div>
 				</div>
-
-				<div class="info-item">
-					<div class="info-item__inner">
-						<div class="info-item__img">
-							<img class="img-responsive img-svg" src="img/icons/ico--no-noise.svg" alt="звуко, шумо и теплоизоляция">
-						</div>
-						<div class="info-item__desc">Высокая звуко, шумо, теплоизоляция.</div>
-					</div>
-				</div>
-
-				<div class="info-item">
-					<div class="info-item__inner">
-						<div class="info-item__img">
-							<img class="img-responsive img-svg" src="img/icons/ico--time.svg" alt="Длительный срок службы">
-						</div>
-						<div class="info-item__desc">Длительный срок службы <br>(до 100 лет).</div>
-					</div>
-				</div>
-
-				<div class="info-item">
-					<div class="info-item__inner">
-						<div class="info-item__img">
-							<img class="img-responsive img-svg" src="img/icons/ico--fireprotect.svg" alt="Пожаробезопасные">
-						</div>
-						<div class="info-item__desc">Пожаробезопасные.</div>
-					</div>
-				</div>
-
-				<div class="info-item">
-					<div class="info-item__inner">
-						<div class="info-item__img">
-							<img class="img-responsive img-svg" src="img/icons/ico--puzzle.svg" alt="Монолит (безшовная композиция)">
-						</div>
-						<div class="info-item__desc">Монолитная поверхность.</div>
-					</div>
-				</div>
+				{% endfor %}
 
 			</div>
 		</div>
@@ -131,114 +100,13 @@ title: 3D Панели для стен в Балаково
 	<section class="cashback" id="cashback">
 		<div class="cashback__left">
 			<div class="cashback-slider">
-				<div>
+				{% import "data/data.html" as sliderItem %}
+				{% for cashBackSlider in sliderItem.slider %}
 					<div class="cashback-slider__img">
-						<img src="img/slider/1.jpg" alt="Соты" class="img-responsive">
+						<img src="img/slider/{{cashBackSlider.img}}.jpg" alt="{{cashBackSlider.title}}" class="img-responsive">
 					</div>
-					<span class="cashback-slider__title">Соты</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/2.jpg" alt="Лабиринт" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Лабиринт</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/3.jpg" alt="Бамбук" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Бамбук</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/4.jpg" alt="Волна крупная горизонтальная" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Волна</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/5.jpg" alt="Ламинария" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Ламинария</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/6.jpg" alt="Феи" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Феи</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/7.jpg" alt="Маленькая лесенка" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Маленькая лесенка</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/8.jpg" alt="Зебра" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Зебра</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/9.jpg" alt="Устина" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Устина</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/10.jpg" alt="Мягкий ромб" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Мягкий ромб</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/11.jpg" alt="Паутинка" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Паутинка</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/12.jpg" alt="Мономир" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Мономир</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/13.jpg" alt="Ромб" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Ромб</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/14.jpg" alt="Астра" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Астра</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/15.jpg" alt="Валенсия" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Валенсия</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/16.jpg" alt="Старый кирпич" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Старый кирпич</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/17.jpg" alt="Волна каноэ" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Волна каноэ</span>
-				</div>
-				<div>
-					<div class="cashback-slider__img">
-						<img src="img/slider/18.jpg" alt="Максвелл" class="img-responsive">
-					</div>
-					<span class="cashback-slider__title">Максвелл</span>
-				</div>
+					<span class="cashback-slider__title">{{cashBackSlider.title}}</span>
+				{% endfor %}
 			</div>
 		</div>
 		<div class="cashback__right">

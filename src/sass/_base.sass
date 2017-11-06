@@ -3,6 +3,14 @@
 @import generated/sprite-png
 // @import generated/sprite-svg
 
+=my-scroll
+	+scrollbar
+		width: 5px
+	+scrollbar-track
+	+scrollbar-thumb
+		background-color: $color-accent
+	+scrollbar-track-piece
+
 body
 	input, textarea
 		&:focus, &:required, &:invalid
@@ -23,28 +31,29 @@ body
 	line-height: 1.5
 	overflow-x: hidden
 	opacity: 1
+	+my-scroll
 
 img, .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
+	
+.icon
+	display: block
+	width: 42px
+	height: 42px
 
 .nopadding
 	padding: 0 !important
 
 a
-	transition: all .45s ease-in-out
+	transition: all .35s ease
 	backface-visibility: hidden
-	outline: none !important
+	outline: none
 	color: $color-accent
 	&:hover, &:focus
 		color: $color-accent
 		text-decoration: underline
-
-.img-svg
-	path
-		fill
-			color: $color-accent
 
 .text-color
 	color: $color-accent
@@ -59,14 +68,21 @@ section
 
 .s-header
 	margin-bottom: 50px
-	font-size: 37px
-	font-weight: 400
-	text-transform: uppercase
 	text-align: center
+	&__title
+		font-size: 36px
+		font-weight: 400
+		text-transform: uppercase
+		+r(1024)
+			font-size: 32px
+		+r(480)
+			font-size: 26px
 	&__desc
 		font-size: 18px
 		text-transform: none
 		font-weight: normal
+		+r(480)
+			font-size: 16px
 
 
 @import layouts

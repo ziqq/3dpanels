@@ -1,4 +1,4 @@
-//Header
+//header
 .header
 	position: relative
 	min-height: 620px
@@ -13,6 +13,17 @@
 		height: 100%
 		background-color: rgba($color-mian-dark, .6)
 		+blur(10)
+	//header__subtitle
+	&__subtitle
+		+r(1200)
+			font-size: 20px
+		+r(992)
+			font-size: 18px
+	//header__title
+	&__title
+		+r(1024)		
+			font-size: 41px
+	//header__top
 	&__top
 		position: relative
 		border-bottom: 1px solid rgba(#fff, .3)
@@ -102,6 +113,9 @@
 		&::before
 			opacity: 1
 			color: lighten($color-accent,10%)
+	+r(1024)
+		&::before
+			left: -10px
 	&__num
 		position: relative
 		display: block

@@ -1,6 +1,10 @@
-// example of simple includes for js
 //=include ../libs/jquery.min.js
-//=include ../libs/modernizr.js
-//=include ../libs/svg4everybody.min.js
+//=include ../libs/scrollspy.min.js
+//=include ../libs/slick-carousel/slick.js
+//=include ../libs/magnific-popup/jquery.magnific-popup.min.js
+//=include ../libs/animated/animate-css.js
 //=include ../libs/waypoints.min.js
+//=include ../libs/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js
+//=include ../libs/jquery.maskedinput.min.js
 //=include ../libs/jquery.equalheights.min.js
+//=include ../libs/svg4everybody.js
