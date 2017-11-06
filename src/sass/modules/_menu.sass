@@ -1,0 +1,131 @@
+//Nav
+.nav
+	display: inline-block
+	ul,li
+		margin: 0
+		padding: 0
+		list-style-type: none
+	li
+		position: relative
+		display: inline-block
+		padding: 19px 0 19px
+		cursor: pointer
+		&::after
+			content: ' '
+			display: block
+			width: 0
+			height: 3px
+			position: relative
+			bottom: -21px
+			left: 50%
+			transform: translateX(-50%)
+			background-color: $color-accent
+			+tr(.5s)
+		& + li
+			margin-left: 45px
+		&:hover
+			a
+				opacity: 1
+			&::after
+				width: 100%
+		a
+			font-size: 12px
+			letter-spacing: 1px
+			font-weight: 500
+			text-transform: uppercase
+			color: #fff
+			opacity: .7
+			&:hover, &:focus
+				text-decoration: none
+		&.active
+			&::after
+				width: 100%
+			a
+				opacity: 1
+		&.no-active
+			display: none
+
+
+//Mobile Menu
+.toggle-mnu
+	display: block
+	position: absolute
+	left: 0
+	top: 0
+	width: 55px
+	height: 55px
+	>span
+		display: block
+		width: 30px
+		height: 1px
+		position: absolute
+		left: 11px
+		top: 25px
+		transition: all .45s ease-in-out
+		backface-visibility: hidden
+		transform-origin: 50% 50%
+		background: $color-accent
+		&:nth-child(1)
+			top: 17px
+		&:nth-child(4)
+			top: 33px
+	&__wrap
+		display: none
+		width: 55px
+		height: 55px
+		position: fixed
+		left: 25px
+		top: 25px
+		transition: all .75s ease-in-out
+		backface-visibility: hidden
+		border: 1px solid $color-accent
+		background: transparent
+		z-index: 500
+		.nav
+			display: block
+			position: absolute
+			top: 103px
+			left: 0
+			width: 420px
+			text-align: center
+			li
+				display: block
+				margin-left: 0
+				padding: 10px 0
+				text-align: center
+				&.active
+					a
+						text-decoration: none
+						color: $color-accent
+				a
+					text-transform: uppercase
+					letter-spacing: 2px
+					font-weight: bold
+					&::after
+						display: none
+					&:hover
+						color: $color-accent
+						text-decoration: none
+		&.active
+			width: 420px
+			height: 450px
+			.toggle-mnu
+				>span
+					&:nth-child(1)
+						opacity: 0
+					&:nth-child(2)
+						transform: rotatez(-45deg)
+					&:nth-child(3)
+						transform: rotatez(45deg)
+					&:nth-child(4)
+						opacity: 0
+		>div
+			overflow: hidden
+			position: absolute
+			left: 10px
+			top: 10px
+			border: 1px solid $color-accent
+			background: #000
+			width: 100%
+			height: 100%
+			cursor: pointer

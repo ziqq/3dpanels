@@ -1,0 +1,422 @@
+@import "vars"
+@import "_libs/_media"
+
+/*--------media screen(1200)--------*/
++max-screen(1200)
+	.header
+		&__subtitle
+			font-size: 20px
+
+/*--------media screen(1024)--------*/
++max-screen(1024)
+
+	.header
+		&__title
+			font-size: 41px
+
+	.phone
+		&::before
+			left: -10px
+
+	.cashback
+		&__right
+			 padding: 35px 40px
+
+	.benefits-item
+		&_inverse
+			margin: 0
+
+
+
+/*--------media screen(992)--------*/
++max-screen(992)
+	.header
+		&__subtitle
+			font-size: 18px
+
+	.form
+		margin-top: 130px
+		width: 100%
+		&__title
+			font-size: 16px
+		&__input
+			font-size: 14px
+		&__btn-group
+			.btn
+				font-size: 14px
+		.person-data
+			width: 250px
+
+	.info-item
+		width: 33.33%
+		padding-bottom: 33.33%
+
+	.benefits-item
+		margin-bottom: 30px
+		&_inverse
+			margin: 0 auto 30px
+		&__text
+			position: static
+		&_text
+			&-center
+				.benefits-item
+					&__text
+						&_inner
+							position: static
+							transform: translate(0)
+			&-bottom
+				.benefits-item
+					&__text
+						&_inner
+							position: static
+							bottom: auto
+
+
+/*--------media screen(768)--------*/
++max-screen(768)
+
+	.header
+		&__text
+			padding-top: 120px
+		&__title
+			font-size: 52px
+			&_desc
+				display: block
+				margin-top: 15px
+		&__phone
+			margin-top: 20px
+	
+	.logo
+		text-align: center
+		&__wrap
+			display: none
+		&__text
+			display: none
+
+	.phone
+		&::before
+			left: -38px
+		&__text
+			bottom: -43px
+
+	.nav
+		li
+			&+ li
+				margin-left: 25px
+
+	.toggle-mnu
+		&__wrap
+			top: 10px
+
+	.cashback
+		&__right
+			 padding: 35px 30px
+
+	.questions
+		.form
+			&__input
+				width: 225px
+			&__btn-group
+			.btn
+				padding: 10px 35px
+
+
+/*--------media screen(480)--------*/
++max-screen(480)
+	.header
+		min-height: 700px
+		padding-bottom: 30px
+		&__top
+			padding-top: 0
+		&__phone
+			padding:
+				top: 10px
+				bottom: 9px
+		
+	.header-text
+		padding-top: 80px
+		&__title
+			font-size: 40px
+			margin-bottom: 35px
+
+	.different
+		margin-left: 0
+
+	.logo
+		padding-top: 0
+
+	.phone
+		display: inline-block
+		float: right
+		text-align: right
+		margin-top: 7px
+		margin-bottom: 14px
+		&::before
+			left: -55px
+			top: 7px
+		&__num
+			font-size: 23px
+		&__text
+			transform: translateX(0)
+			left: auto
+			right: 0
+			bottom: -32px
+
+	.header__nav
+		display: none
+
+	.nav
+		li
+			&::after
+				display: none
+
+	//Mobile Menu
+	.toggle-mnu
+		&__wrap
+			display: block
+
+	.form
+		margin:
+			top: 30px
+		&__title
+			font-size: 18px
+		&__btn-group
+			.btn
+				font-size: 18px
+		.person-data
+			width: 265px
+
+	.info-item
+		width: 50%
+		padding-bottom: 50%
+
+	.benefits
+		padding-bottom: 0
+
+	.cashback
+		&-slider
+			width: 100%
+		&__left, &__right
+			width: 100%
+			float: none
+		&__left
+			margin-bottom: 15px
+		.form
+			.btn
+				padding: 13px 45px
+
+	/*--------Benefits Section--------*/
+	.benefits-item
+		&__img
+			width: 100%
+			float: none
+		&__text
+			width: 100%
+			float: none
+			padding: 15px 30px
+			border: 
+				left: 1px solid #eee
+				right: 1px solid #eee
+				bottom: 1px solid #eee
+		&_inverse
+			text-align: left
+
+
+	.howwework
+		padding: 80px 0 50px
+	.howwework-item
+		padding: 0 15px
+		width: 50%
+		margin-bottom: 30px
+		& + &
+			margin-left: 0
+		&__text
+			font-size: 14px
+	.top
+		bottom: 20px
+		&.active
+			right: 20px
+
+	.questions
+		.form
+			&__input
+				margin-top: 30px
+				& + .form__input
+					margin-top: 30px
+					margin-left: 0
+
+/*--------media screen(425)--------*/
++max-screen(425)
+
+	.header
+		&__title
+			font-size: 51px
+			&_desc
+				.text-color
+					font-size: 51px
+
+	//Mobile Menu
+	.toggle-mnu
+		&__wrap
+			&.active				
+				width: 82%
+			.nav
+				width: 350px
+
+	.s-header
+		font-size: 30px
+		&__desc
+			font-size: 14px
+
+	.questions
+		.form
+			.form__input + .form__input
+				margin-left: 0
+				margin-top: 15px
+			&__btn-group
+				margin-left: 0
+				margin-top: 0
+				.btn
+					display: block
+					width: 100%
+			&__input
+				width: 80%
+
+	#easy-clean
+		p, span
+			max-width: 310px
+
+/*--------media screen(375)--------*/
++max-screen(375)
+
+	//Buttons
+	.btn
+		&_transparent
+			font-size: 20px
+
+	//Mobile Menu
+	.toggle-mnu
+		&__wrap
+			left: 15px
+			&.active				
+				width: 89%
+
+	.phone
+		&::before
+			left: -15px
+
+	.nav
+		li
+			&+ li
+				margin-left: 15px
+
+	//Mobile Menu
+	.toggle-mnu
+		&__wrap
+			.nav
+				width: 305px
+
+	/*--------Info Section--------*/
+	.info-item
+		&__inner
+			padding-top: 0
+
+	/*--------Benefits Section--------*/
+	.benefits-item
+		&__text
+			padding: 15px
+
+	.questions
+		.form
+			margin-top: 15px
+			&__title
+				font-size: 17px
+			&__btn-group
+				top: 30px
+			.person-data
+				width: 220px
+
+	.howwework-item
+		display: block
+		float: none
+		width: 80%
+		margin: 0 auto 40px!important
+
+	#easy-clean
+		padding: 50px 14px 50px 20px
+
+/*--------media screen(320)--------*/
++max-screen(320)
+	.btn
+		padding: 13px 45px
+		width: 100%
+		&_transparent
+			font-size: 18px
+			padding: 10px 25px
+
+	.mouse-icon
+		bottom: 5px
+
+	.cashback
+		.form
+			.btn
+				padding: 13px 23px
+
+	.header
+		min-height: 480px
+
+	.header-text
+		padding-top: 30px
+		&__subtitle
+			font-size: 18px
+		&__title
+			font-size: 33px
+			margin-bottom: 15px
+		&__desc
+			font-size: 14px
+			margin-bottom: 15px
+
+	.s-header
+		font-size: 23px
+
+	.phone
+		&__num
+			font-size: 19px
+		&::before
+			top: 6px
+			left: -30px
+
+	//Mobile Menu
+	.toggle-mnu
+		&__wrap
+			&.active				
+				width: 87%
+
+	.nav
+		li
+			&+ li
+				margin-left: 3px
+
+	//Mobile Menu
+	.toggle-mnu
+		&__wrap
+			top: 6px
+			.nav
+				width: 265px
+
+	/*--------Info Section--------*/
+	.info-item
+		margin-bottom: 30px
+
+	.cashback
+		&__title
+			font-size: 24px
+
+	.questions
+		.form
+			&__input
+				width: 100%
+
+	#easy-clean
+		p, span
+			max-width: 257px

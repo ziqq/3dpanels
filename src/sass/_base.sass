@@ -1,0 +1,72 @@
+@import helpers/all
+@import includes/all
+@import generated/sprite-png
+// @import generated/sprite-svg
+
+body
+	input, textarea
+		&:focus, &:required, &:invalid
+			color: #666
+	input, textarea
+		&:required, &:valid
+			color: #666
+
+html, body
+	height: 100%
+
+body
+	position: relative
+	min-width: 320px
+	font-family: $default-font
+	font-size: 16px
+	font-weight: normal
+	line-height: 1.5
+	overflow-x: hidden
+	opacity: 1
+
+img, .img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.nopadding
+	padding: 0 !important
+
+a
+	transition: all .45s ease-in-out
+	backface-visibility: hidden
+	outline: none !important
+	color: $color-accent
+	&:hover, &:focus
+		color: $color-accent
+		text-decoration: underline
+
+.img-svg
+	path
+		fill
+			color: $color-accent
+
+.text-color
+	color: $color-accent
+
+section
+	position: relative
+	padding: 60px 0 50px
+	color: #000
+	&.inverse
+		color: #fff
+		background-color: #000
+
+.s-header
+	margin-bottom: 50px
+	font-size: 37px
+	font-weight: 400
+	text-transform: uppercase
+	text-align: center
+	&__desc
+		font-size: 18px
+		text-transform: none
+		font-weight: normal
+
+
+@import layouts

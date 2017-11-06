@@ -1,0 +1,121 @@
+$icons: (0:0)
+$icons: map-merge($icons,('ico--clean': (X: -266px, Y:0px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--cleaneng': (X: 0px, Y:-532px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--colors': (X: -798px, Y:-532px, W: 256px, H: 242px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--delivery': (X: -266px, Y:-266px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--eco': (X: -532px, Y:0px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--fireprotect': (X: -532px, Y:-266px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--loyalnost': (X: 0px, Y:0px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--no-noise': (X: -266px, Y:-532px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--original': (X: -798px, Y:-266px, W: 252px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--production': (X: -532px, Y:-532px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--puzzle': (X: 0px, Y:-266px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ico--time': (X: -798px, Y:0px, W: 256px, H: 256px, TW: 1054px, TH: 788px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-ico--clean
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: -266px 0px
+//
+//.icon-ico--cleaneng
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -532px
+//
+//.icon-ico--colors
+//  width: 256px
+//  height: 242px
+//  background-image: url('../img/sprite.png')
+//  background-position: -798px -532px
+//
+//.icon-ico--delivery
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: -266px -266px
+//
+//.icon-ico--eco
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: -532px 0px
+//
+//.icon-ico--fireprotect
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: -532px -266px
+//
+//.icon-ico--loyalnost
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-ico--no-noise
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: -266px -532px
+//
+//.icon-ico--original
+//  width: 252px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: -798px -266px
+//
+//.icon-ico--production
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: -532px -532px
+//
+//.icon-ico--puzzle
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -266px
+//
+//.icon-ico--time
+//  width: 256px
+//  height: 256px
+//  background-image: url('../img/sprite.png')
+//  background-position: -798px 0px
+//

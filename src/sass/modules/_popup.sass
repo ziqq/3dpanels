@@ -1,0 +1,170 @@
+//Popup Style
+.catalog
+	min-width: 300px
+	max-width: 768px
+	max-height: 80vh
+	margin: 0 auto
+	background-color: #fff
+	overflow-y: auto
+	position: relative
+	&__inner
+		padding: 40px
+		+clr
+		
+//catalog-item
+.catalog-item
+	position: relative
+	width: 23.5%
+	margin-right: 2% 
+	float: left
+	background-color: #fff
+	+bs(0 2px 4px rgba(0,0,0,0.1))
+	border: 1px solid #eee
+	+tr(.35s)
+	transform: rotate(-3deg)
+	&:nth-child(4n)
+		margin-right: 0
+	&:nth-child(even)
+		transform: rotate(3deg) scale(1.05)
+	&:nth-child(5n)
+		transform: rotate(-4deg) scale(0.9)
+		position: relative
+		left: -10px
+	&::before, &::after
+		content: ""
+		position: absolute
+		z-index: -1
+		bottom: 8px
+		left: 10px
+		width: 50%
+		height: 20%
+		max-width: 300px
+		box-shadow: 0 8px 16px rgba(0,0,0,0.6)
+		transform: skew(-15deg) rotate(-6deg)
+	&::after
+		left: auto
+		right: 10px
+		transform: skew(15deg) rotate(6deg)
+	&:hover
+		position: relative
+		z-index: 10
+		box-shadow: 8px 8px 15px rgba(0,0, 0, 0.4)
+		transform: rotate(0deg) scale(1.2)
+		text-decoration: none
+		&::after
+			left: auto
+			right: 10px
+			transform: skew(15deg) rotate(6deg)
+		&:nth-child(even)
+			position: relative
+			z-index: 10
+			box-shadow: 8px 8px 15px rgba(0,0, 0, 0.4)
+			transform: rotate(0deg) scale(1.2)
+		&:nth-child(5n)
+			position: relative
+			z-index: 10
+			box-shadow: 8px 8px 15px rgba(0,0, 0, 0.4)
+			transform: rotate(0deg) scale(1.2)
+	&__inner
+		position: relative
+		padding: 10px
+		border: 1px solid #eee
+		background: #fff
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1)
+	//catalog-item__desc
+	&__desc
+		margin-top: 5px
+		color: #000
+		+clr
+		.title
+			display: block
+			text-align: center
+			text-transform: uppercase
+			font-size: 14px
+		.size
+			display: inline-block
+			margin-top: 4px
+			vertical-align: bottom
+			float: left
+			font-size: 13px
+		.price
+			display: inline-block
+			vertical-align: bottom
+			float: right
+			font-size: 16px
+			.fa
+				font-size: 16px
+	+max-screen(480)
+		width: 49%
+		transform: none !important
+		&:nth-child(5n)
+			left: auto
+		&:nth-child(4n)
+			margin-right: auto
+		&:nth-child(2n)
+			margin-right: 0
+		&:hover
+			display: none
+	+max-screen(375)
+		width: 98%
+		&:nth-child(2n)
+			margin-right: auto
+
+.easy-clean
+	max-width: 768px
+	max-height: 80vh
+	margin: 0 auto
+	color: #000
+	background-color: #fff
+	overflow-x: hidden
+	overflow-y: auto
+	position: relative
+	p, span
+		display: block
+		margin-bottom: 20px
+		max-width: 668px
+		color: #000
+	span
+		font-weight: 600
+	&__inner
+		padding: 50px
+
+.privacy
+	@extend .easy-clean	
+
+.privacy
+	&__inner
+		padding: 30px
+	&__title
+		display: block
+		margin-bottom: 20px
+		max-width: 668px
+		font-size: 20px
+		color: #000		
+	&__subtitle
+		display: block
+		margin-bottom: 20px
+		max-width: 668px
+		font-size: 16px
+		color: #000
+	p
+		font-size: 14px
+
+#callback
+	position: relative
+	max-width: 320px
+	margin: 0 auto
+	background-color: rgba(#fff, .8)
+	.mfp-close
+		color: #fff
+	form
+		margin-top: 0
+		width: 100%
+		background-color: rgba(0, 0, 0, 0.95);
+		border-radius: 0
+		input
+			padding: 5px 15px
+			font-size: 16px
+		.btn
+			font-size: 14px
+			width: 100%

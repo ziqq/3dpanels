@@ -1,0 +1,39 @@
+/*--------Footer--------*/
+.footer
+	padding: 15px 0
+	color: #fff
+	background-color: #000
+	&__privacy, &__easy-clean
+		display: inline-block
+		vertical-align: middle
+		margin-left: 35px
+		font-size: 13px
+		text-decoration: underline
+		color: #fff
+		opacity: .6
+		&:hover
+			color: #fff
+			opacity: 1
+	+max-screen(480)
+		text-align: center
+		&__privacy, &__easy-clean
+			display: block
+			margin: 10px 0
+
+.copyright
+	display: inline-block
+	vertical-align: middle 	
+	font-size: 14px
+	color: #fff
+	opacity: .6
+
+.developer
+	display: inline-block
+	float: right
+	font-size: 13px
+	opacity: .6
+	&__link
+		text-transform: uppercase
+		opacity: 1
+	+max-screen(480)
+		float: none

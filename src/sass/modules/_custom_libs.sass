@@ -1,0 +1,51 @@
+//Magnific Popup
+.my-mfp-slide-bottom
+	.zoom-anim-dialog,
+	#easy-clean,
+	#callback
+		opacity: 0
+		transition: all 0.2s ease-out
+		transform: translateY(-20px) perspective(600px) rotateX(10deg)
+	&.mfp-ready .zoom-anim-dialog,
+	&.mfp-ready #easy-clean,
+	&.mfp-ready #callback
+		opacity: 1
+		transform: translateY(0) perspective(600px) rotateX(0)
+	&.mfp-removing .zoom-anim-dialog,
+	&.mfp-removing #easy-clean,
+	&.mfp-removing #callback
+		opacity: 0
+		transform: translateY(-10px) perspective(600px) rotateX(10deg)
+	&.mfp-bg
+		opacity: 0
+		transition: opacity 0.3s ease-out
+	&.mfp-ready.mfp-bg
+		opacity: 0.8
+	&.mfp-removing.mfp-bg
+		opacity: 0
+
+//Custom Scroll
+.mCSB_inside
+	>.mCSB_container
+		margin-right: 0
+
+.mCSB_scrollTools
+	.mCSB_dragger
+		.mCSB_dragger_bar
+			background-color: $color-accent
+		&.mCSB_dragger_onDrag
+			.mCSB_dragger_bar
+				background-color: $color-accent
+	.mCSB_draggerRail
+		background-color: rgba($color-accent, .3s)
+
+.mCSB_scrollTools
+	width: 6px
+	.mCSB_dragger
+		.mCSB_dragger_bar
+			width: 100%
+			+br(0)
+	.mCSB_draggerRail
+		display: none
+	.mCSB_draggerContainer
+		background-color: transparent

@@ -1,0 +1,81 @@
+.btn
+	display: inline-block
+	border: none
+	color: darken($color-accent, 20%)
+	text-decoration: none
+	background-color: $color-accent
+	padding: 11px 85px
+	font-family: "OpenSans", sans-serif
+	font-size: 22px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 1px
+	border-radius: 4px
+	text-align: center
+	position: relative
+	outline: none
+	+tr(.5s)
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($color-accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		color: #fff
+		opacity: .9
+		background-color: lighten($color-accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($color-accent, 5%)
+		&::after
+			opacity: .32
+	//btn
+	&_transparent
+		display: inline-block
+		padding: 11px 35px
+		color: $color-accent
+		border: 3px solid $color-accent
+		background-color: transparent
+		&::after
+			display: none
+		&:hover
+			background-color: $color-accent
+			opacity: 1
+
+	//btn__transparent
+
+.go-top
+	width: 50px
+	height: 50px
+	position: fixed
+	bottom: 25px
+	right: -100px
+	font-size: 26px
+	line-height: 50px
+	text-align: center
+	color: #000
+	border-radius: 10em
+	background-color: $color-accent
+	opacity: .5
+	cursor: pointer
+	z-index: 12
+	+tr(.25s)
+	&.active
+		right: 30px
+	i
+		line-height: 0
+	&:hover
+		color: #fff
+		background-color: $color-accent
+		opacity: 1
